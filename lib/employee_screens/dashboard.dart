@@ -43,7 +43,7 @@ class _DashBoardState extends State<DashBoard> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 19, right: 20),
+                    padding: const EdgeInsets.only(top: 19, right: 20),
                     child: Container(
                       height: 40,
                       decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class _DashBoardState extends State<DashBoard> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Category'),
+                          const Text('Category'),
                           Padding(
                             padding: const EdgeInsets.only(right: 13.0),
                             child: GestureDetector(
@@ -85,14 +85,14 @@ class _DashBoardState extends State<DashBoard> {
                                           builder: (BuildContext context) =>
                                               CategoryScreen()));
                                 },
-                                child: Text('View All')),
+                                child: const Text('View All')),
                           ),
                         ],
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 23, right: 15),
+                    padding: const EdgeInsets.only(top: 23, right: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -200,7 +200,7 @@ class _DashBoardState extends State<DashBoard> {
                             height: 114,
                             width: 100,
                             decoration: BoxDecoration(
-                              color: Color(0XFFFFFFFF),
+                              color: const Color(0XFFFFFFFF),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Column(
@@ -244,16 +244,16 @@ class _DashBoardState extends State<DashBoard> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Recent Leave Request'),
+                          const Text('Recent Leave Request'),
                           Padding(
-                            padding: EdgeInsets.only(right: 13.0),
+                            padding: const EdgeInsets.only(right: 13.0),
                             child: GestureDetector(onTap: () {
                                Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
                                               LeaveRequests()));
-                            }, child: Text('View All')),
+                            }, child: const Text('View All')),
                           ),
                         ],
                       ),
@@ -356,7 +356,7 @@ class _DashBoardState extends State<DashBoard> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 32,
                     ),
                     child: Container(
@@ -388,7 +388,7 @@ class _DashBoardState extends State<DashBoard> {
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.alarm,
                                           size: 34,
@@ -399,7 +399,7 @@ class _DashBoardState extends State<DashBoard> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsets.only(top: 8),
                                   child: Text('Late Attendence'),
                                 ),
@@ -424,24 +424,24 @@ class _DashBoardState extends State<DashBoard> {
                                   child: Container(
                                     height: 108,
                                     width: 140,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0XFFFFEAE6),
                                     ),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.alarm_off,
                                           size: 34,
                                           color: Color(0XFF505050),
                                         ),
-                                        Text('12 '),
+                                        Text('2 '),
                                       ],
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsets.only(top: 8),
                                   child: Text('Absent'),
                                 ),

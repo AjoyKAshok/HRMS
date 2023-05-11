@@ -29,37 +29,17 @@ class _SplashScreenState extends State<SplashScreen> {
     var height = MediaQuery.of(context).viewPadding.top;
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color(0XFF3C6255),
+      // backgroundColor: Color(0XFF3C6255),
       body: Container(
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 150,
-              width: 150,
-              padding: const EdgeInsets.only(left: 10, right: 10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(24),
-                  image: const DecorationImage(
-                image: AssetImage("assets/images/HRMS.png"),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(
+                     image: DecorationImage(
+                image: AssetImage("assets/images/SplashScreen.JPG"),
                 fit: BoxFit.contain,
-              )),
-            ),
-            // SizedBox(height: 5,),
-
-            const Text(
-              'HRMS',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
         ),
+        ),
+        
       ),
     );
   }

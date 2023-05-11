@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hrms/employee_screens/chat_screen.dart';
 import 'package:hrms/employee_screens/dashboard.dart';
+import 'package:hrms/employee_screens/holiday_bottom_nav.dart';
 import 'package:hrms/employee_screens/holiday_calendar_screen.dart';
 import 'package:hrms/employee_screens/profile_screen.dart';
 import 'package:hrms/employee_screens/report_screen.dart';
+import 'package:hrms/employee_screens/test_holiday_calendar.dart';
 
 import '../utils/menu.dart';
 
@@ -133,32 +135,23 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   Widget _getTabBarView() {
     return TabBarView(
-        children: [
-          _currentIndex == 0
-              ? DashBoard()
-              : _currentIndex == 1
-                  ? ReportScreen()
-                  : _currentIndex == 2
-                      ? HolidayCalendarScreen()
-                      : ProfileScreen(),
+      children: [
+        _currentIndex == 0
+            ? DashBoard()
+            : _currentIndex == 1
+                ? ReportScreen()
+                : _currentIndex == 2
+                    ? HolidayNavBar()
+                    : ProfileScreen(),
 
         //  DashBoard(),
-         ReportScreen(),
-         HolidayCalendarScreen(),
-         ProfileScreen(),
-        ],
-      
+        ReportScreen(),
+        HolidayCalendarScreen(),
+        ProfileScreen(),
+      ],
     );
   }
 
-  // final List<Widget> _children = [
-  //   DashBoard(),
-  //   ReportScreen(),
-  //   ChatScreen(),
-  //   ProfileScreen(),
-  // ];
-
-  
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
@@ -175,39 +168,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
             extendBodyBehindAppBar: true,
             // primary: false,
             backgroundColor: Color(0XFFEEEEEE),
-            
+
             appBar: _getAppBar(),
-            // PreferredSize(
-            //   preferredSize: Size.fromHeight(100.0),
-            //   child:
-            //     appBar: AppBar(
-            //   toolbarHeight: 60,
-            //   backgroundColor: Colors.white,
-            //   elevation: 0,
-            //   // iconTheme: IconThemeData(color: orange),
-            //   leading: Builder(
-            //     builder: (context) => IconButton(
-            //       onPressed: () => Scaffold.of(context).openDrawer(),
-            //       icon: Image.asset(
-            //         "assets/images/NewRMSMenu.png",
-            //         height: 25,
-            //         width: 44,
-            //         color: Color(0XFF505050),
-            //       ),
-            //     ),
-            //   ),
-            //   title: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: const [
-            //       Image(
-            //         height: 30,
-            //         image: AssetImage('assets/images/HRMS.png'),
-            //       ),
-            //       Icon(Icons.notifications_active_outlined,
-            //           color: Color(0XFF909090)),
-            //     ],
-            //   ),
-            // ),
 
             drawer: GestureDetector(
               onTap: () {
@@ -217,7 +179,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 child: Menu(),
               ),
             ),
-            
+
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: _currentIndex,
               onTap: (index) {
@@ -256,41 +218,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ],
             ),
-            // bottomNavigationBar: Container(
-            //   height: 79,
-            //   decoration: const BoxDecoration(
-            //     color: Colors.white,
-            //     borderRadius: BorderRadius.only(
-            //       topLeft: Radius.circular(35),
-            //       topRight: Radius.circular(35),
-            //     ),
-            //     // boxShadow: CustomTheme.cardShadow,
-            //   ),
-            //   child: const TabBar(
-            //       padding: EdgeInsets.symmetric(vertical: 10),
-            //       indicatorColor: Colors.transparent,
-            //       tabs: [
-            //         Tab(
-            //           icon: Icon(Icons.home),
-            //         ),
-            //         Tab(
-            //           icon: Icon(Icons.bar_chart_sharp),
-            //         ),
-            //         Tab(
-            //           icon: Icon(Icons.calendar_month_outlined),
-            //         ),
-            //         Tab(
-            //           icon: Icon(Icons.person),
-            //         ),
-            //       ]),
-            // ),
+
             body: _getTabBarView(),
-            // body: TabBarView(children: [
-            //   DashBoard(),
-            //   ReportScreen(),
-            //   ChatScreen(),
-            //   ProfileScreen(),
-            // ]),
           ),
         ),
       ],

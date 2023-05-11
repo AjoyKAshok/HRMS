@@ -3,15 +3,15 @@ import 'package:table_calendar/table_calendar.dart';
 
 import 'dashboard_screen.dart';
 
-class HolidayCalendarScreen extends StatefulWidget {
-  HolidayCalendarScreen({Key? key}) : super(key: key);
+class HolidayNavBar extends StatefulWidget {
+  HolidayNavBar({Key? key}) : super(key: key);
 
   @override
-  State<HolidayCalendarScreen> createState() => _HolidayCalendarScreenState();
+  State<HolidayNavBar> createState() => _HolidayNavBarState();
 }
 
-class _HolidayCalendarScreenState extends State<HolidayCalendarScreen> {
-  CalendarFormat format = CalendarFormat.month;
+class _HolidayNavBarState extends State<HolidayNavBar> {
+CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
   // late CalendarController _calendarController;
@@ -41,32 +41,32 @@ class _HolidayCalendarScreenState extends State<HolidayCalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0XFFEEEEEE),
-      appBar: AppBar(
-        toolbarHeight: 50,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext context) => DashboardScreen()));
-            // Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back),
-          color: const Color(0XFF909090),
-        ),
-        title: const Text(
-          'Holiday Calendar',
-          style: TextStyle(
-            color: Color(0XFF909090),
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   toolbarHeight: 50,
+      //   backgroundColor: Colors.white,
+      //   leading: IconButton(
+      //     onPressed: () {
+      //       Navigator.pushReplacement(
+      //           context,
+      //           MaterialPageRoute(
+      //               builder: (BuildContext context) => DashboardScreen()));
+      //       // Navigator.of(context).pop();
+      //     },
+      //     icon: const Icon(Icons.arrow_back),
+      //     color: const Color(0XFF909090),
+      //   ),
+      //   title: const Text(
+      //     'Holiday Calendar',
+      //     style: TextStyle(
+      //       color: Color(0XFF909090),
+      //     ),
+      //   ),
+      // ),
       body: Column(
         children: [
           //defining min an max years
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 30, right: 20),
+            padding: const EdgeInsets.only(left: 20, top: 110, right: 20),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
