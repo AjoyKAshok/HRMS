@@ -3,6 +3,7 @@ import 'package:hrms/employee_screens/apply_leave_screen.dart';
 import 'package:hrms/employee_screens/attendance_screen.dart';
 import 'package:hrms/employee_screens/dashboard_screen.dart';
 import 'package:hrms/employee_screens/holiday_calendar_screen.dart';
+import 'package:hrms/employee_screens/leave_policy.dart';
 import 'package:hrms/employee_screens/payslip_screen.dart';
 import 'package:hrms/employee_screens/resignation_screen.dart';
 
@@ -303,7 +304,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      ResignationScreen()));
+                                      LeavePolicyScreen()));
                         },
                         child: Container(
                           height: 114,
@@ -333,7 +334,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                   top: 17,
                                 ),
                                 child: Text(
-                                  'Resignation',
+                                  'Leave Policy',
                                   style: TextStyle(
                                     color: Color(0XFF909090),
                                   ),

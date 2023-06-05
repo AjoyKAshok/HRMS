@@ -239,12 +239,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             SizedBox(height: 72),
                             GestureDetector(
                               onTap: () {
-                                if (globalFormKey.currentState!.validate()) {
+                                // if (globalFormKey.currentState!.validate()) {
                                   // _onClickLogin(context, loginViewModel);
                                   Navigator.of(context)
                                       .pushReplacementNamed(RoutePaths.dashboard);
                                   globalFormKey.currentState!.save();
-                                }
+                                // }
                               },
                               child: Container(
                                 width: double.infinity,
